@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Predicción</title>
+    {% load static %}
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e6e6e6; /* Cambié el color de fondo */
+            font-family: 'Arial', sans-serif; /* Cambié la fuente */
+        }
+
+        .container {
+            text-align: center;
+            border: 1px solid #ccc; /* Añadí un borde al contenedor */
+            padding: 20px; /* Añadí un relleno al contenedor */
+            border-radius: 8px; /* Añadí bordes redondeados */
+            background-color: #fff; /* Añadí un color de fondo al contenedor */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadí una sombra */
+        }
+
+        #resultado {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db; /* Cambié el color del texto */
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="resultado">
+            {% if resultado %}
+                Predicción: 
+                <br>{{ resultado }}
+            {% else %}
+                No se ha realizado ninguna predicción.
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
